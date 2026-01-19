@@ -1,4 +1,7 @@
-﻿namespace AttendanceAPI.Models
+﻿//using AttendanceAPI.Migrations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AttendanceAPI.Models
 {
     public class Employee
     {

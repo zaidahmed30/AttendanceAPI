@@ -1,7 +1,6 @@
 ﻿using AttendanceAPI.Context;
 using AttendanceAPI.Models;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace AttendanceAPI.Services
 {
