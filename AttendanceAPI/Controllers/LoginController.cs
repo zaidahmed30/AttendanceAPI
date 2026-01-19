@@ -38,10 +38,10 @@ namespace AttendanceAPI.Controllers
             return Ok(user1);
         }
 
-       [HttpPatch("{id}")]
-        public ActionResult Logout(int id)
+       [HttpPatch("{employeeId}")]
+        public ActionResult Logout(int employeeId)
         {
-            var updated = _attendanceService.UpdateAttendance(id, null);
+            var updated = _attendanceService.UpdateAttendance(employeeId, null);
             if (updated == null)
             {
                 return NotFound("No active login/attendance record found for this employee.");
