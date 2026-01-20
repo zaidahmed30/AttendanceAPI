@@ -21,6 +21,12 @@ namespace AttendanceAPI.Controllers
             return _attendanceService.GetAttendance();
         }
 
+        [HttpGet("{employeeId}")]
+        public IEnumerable<Attendance> GetAttendanceByEmployeeId(int employeeId)
+        {
+            return _attendanceService.GetAttendanceByEmployeeId(employeeId);
+        }
+
         [HttpPost]
         public ActionResult<Attendance> PostAttendance(Attendance attendance)
         {

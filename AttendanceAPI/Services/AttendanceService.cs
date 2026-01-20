@@ -18,6 +18,11 @@ namespace AttendanceAPI.Services
             return _context.Attendances.ToList();
         }
 
+        public IEnumerable<Attendance> GetAttendanceByEmployeeId(int employeeId)
+        {
+            return _context.Attendances.Where(a => a.EmployeeId == employeeId).ToList();
+        }
+
         public Attendance PostAttendance(Attendance attendance)
         {
             attendance.LoginTime = DateTime.Now;

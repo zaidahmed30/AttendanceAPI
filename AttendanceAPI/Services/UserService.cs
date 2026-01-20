@@ -1,5 +1,6 @@
 ﻿using AttendanceAPI.Context;
 using AttendanceAPI.Models;
+using AttendanceAPI.Models.DTOs;
 
 namespace AttendanceAPI.Services
 {
@@ -16,8 +17,15 @@ namespace AttendanceAPI.Services
             return _context.Users.ToList();
         }
 
-        public User PostUser(User user)
+        public User PostUser(UserDTO userDTO)
         {
+            var user = new User
+            {
+                UserId = userDTO.UserId,
+                Username = userDTO.Username,
+                Password = userDTO.Password,
+                EmployeeId = userDTO.EmployeeId
+            };
             _context.Users.Add(user);
             _context.SaveChanges();
             return user;

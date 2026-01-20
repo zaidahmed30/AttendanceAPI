@@ -1,4 +1,5 @@
 ﻿using AttendanceAPI.Models;
+using AttendanceAPI.Models.DTOs;
 using AttendanceAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,9 +23,9 @@ namespace AttendanceAPI.Controllers
         }
 
         [HttpPost]
-        public User PostUser(User user)
+        public User PostUser(UserDTO userDTO)
         {
-            return _userService.PostUser(user);
+            return _userService.PostUser(userDTO);
         }
     }
 }

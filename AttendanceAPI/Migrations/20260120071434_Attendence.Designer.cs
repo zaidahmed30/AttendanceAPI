@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AttendanceAPI.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20260118153647_Att")]
-    partial class Att
+    [Migration("20260120071434_Attendence")]
+    partial class Attendence
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
