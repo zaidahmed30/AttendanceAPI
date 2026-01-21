@@ -19,9 +19,9 @@ namespace AttendanceAPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult<User> Login(int employeeId, User user)
+        public ActionResult<User> Login(User user)
         {
-            var user1 = _loginService.Login(employeeId,user);
+            var user1 = _loginService.Login(user);
 
             if (user1 == null)
             {
@@ -29,7 +29,7 @@ namespace AttendanceAPI.Controllers
             }
             var attendance = new Attendance
             {
-                EmployeeId = employeeId,
+                EmployeeId = user1.EmployeeId,
                 Date = DateTime.Now.Date
             };
 

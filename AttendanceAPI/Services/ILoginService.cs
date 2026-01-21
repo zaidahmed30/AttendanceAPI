@@ -4,6 +4,6 @@ namespace AttendanceAPI.Services
 {
     public interface ILoginService
     {
-        public User Login(int employeeId, User user);
+        public User Login(User user);
     }
 }

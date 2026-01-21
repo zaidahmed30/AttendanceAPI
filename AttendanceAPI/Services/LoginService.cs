@@ -10,7 +10,7 @@ namespace AttendanceAPI.Services
         {
             _context = context;
         }
-        public User Login(int employeeId, User user)
+        public User Login(User user)
         {
             var username = user.Username;
             var password = user.Password;
